@@ -1,0 +1,150 @@
+@import "~vue-color-kit/dist/vue-color-kit.css";
+
+@layer base {
+
+  .btn-primary {
+    @apply font-medium bg-purple-500 hover:bg-purple-600 text-white shadow-sm rounded-lg px-5 py-2.5;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-5xl text-center font-semibold m-10;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white;
+  }
+
+}
+
+.next-step, .back-step {
+  width: 200px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ant-modal-title {
+  text-align: center;
+}
+
+.ant-steps-finish-icon {
+  vertical-align: .075em;
+}
+
+.ant-result-title {
+  @apply text-3xl sm:text-5xl text-center font-semibold m-7;
+}
+
+.ant-result-subtitle {
+  @apply text-xl sm:text-3xl text-center font-semibold m-2;
+}
+
+.ant-message-custom-content {
+  display: flex;
+  align-items: center;
+}
+
+.hu-color-picker {
+  .color-alpha {
+    display: none;
+  }
+
+  .colors .item:nth-child(8) {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .color-type:nth-child(2n) {
+    display: none;
+  }
+}
+
+$clr-neon: #14f195;
+$clr-bg: #0eae6c;
+
+
+.neon-button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: $clr-neon;
+  border: $clr-neon 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em $clr-bg, 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 $clr-neon, 0 0 0.5em 0 $clr-neon;
+
+  position: relative;
+}
+
+.neon-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: $clr-neon;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em $clr-neon;
+  opacity: 0;
+  background-color: $clr-neon;
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+  color: $clr-bg;
+  text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
+}
+
+.initial-loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-loading-label {
+  @extend .neon-button;
+
+  border: none;
+  box-shadow: none;
+  cursor: progress;
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after
+  {
+    opacity: 0;
+  }
+}

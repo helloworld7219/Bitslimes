@@ -1,0 +1,51 @@
+{
+  "name": "waveform-nft",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "./deploy.sh"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "@solana/wallet-adapter-base": "^0.4.1",
+    "@solana/wallet-adapter-react": "^0.7.1",
+    "@solana/wallet-adapter-wallets": "^0.6.1",
+    "@solana/web3.js": "^1.21.0",
+    "@oyster/just-minting": "0.0.1",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "wfplayerAdjusted": "g00dv1n/WFPlayer",
+    "vue-upload-component": "^3.0.50",
+    "ant-design-vue": "^2.2.8",
+    "@ant-design/icons-vue": "^6.0.1",
+    "vue-color-kit": "^1.0.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "vue-cli-plugin-tailwind": "~2.0.6",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "babel-plugin-import": "^1.13.3",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2"
+  }
+}
